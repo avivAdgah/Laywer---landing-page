@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy: #0b1f33;
+  --color-navy-light: #13314f;
+  --color-offwhite: #f7f5f0;
+  --color-gold: #c6a15b;
+  --color-gold-light: #d8bb82;
+  --color-charcoal: #242424;
+}
+
+@theme inline {
+  --color-navy: var(--color-navy);
+  --color-navy-light: var(--color-navy-light);
+  --color-offwhite: var(--color-offwhite);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-charcoal: var(--color-charcoal);
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-offwhite);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+/* Reveal-on-scroll utility, restrained fade + slight rise */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
