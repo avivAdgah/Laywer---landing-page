@@ -1,6 +1,30 @@
+import Image from "next/image";
 import { ImageIcon } from "lucide-react";
 
-export default function ImagePlaceholder({ label, alt, className = "", aspect = "aspect-[4/5]" }) {
+export default function ImagePlaceholder({
+  label,
+  alt,
+  className = "",
+  aspect = "aspect-[4/5]",
+  src,
+}) {
+  if (src) {
+    return (
+      <div
+        className={`relative ${aspect} w-full overflow-hidden rounded-sm border border-navy/10 ${className}`}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(min-width: 1024px) 480px, 90vw"
+          className="object-cover"
+          priority={false}
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       role="img"

@@ -55,6 +55,7 @@ export default function Hero() {
             alt="Employment attorney Ethan Marlowe"
             aspect="aspect-[4/5]"
             className="mx-auto max-w-md lg:max-w-none"
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=1000&fit=crop&q=80"
           />
         </Reveal>
       </div>

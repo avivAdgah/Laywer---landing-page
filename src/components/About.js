@@ -9,9 +9,10 @@ export default function About() {
         <Reveal>
           <ImagePlaceholder
             label="[ATTORNEY PORTRAIT / OFFICE PLACEHOLDER]"
-            alt="Ethan Marlowe at the Marlowe Employment Law office"
+            alt="The Marlowe Employment Law office"
             aspect="aspect-[4/5]"
             className="max-w-md lg:max-w-none"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=1000&fit=crop&q=80"
           />
         </Reveal>
 
