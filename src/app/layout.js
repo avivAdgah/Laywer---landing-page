@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
           <style>{".reveal { opacity: 1 !important; transform: none !important; }"}</style>
         </noscript>
         {children}
+        <Script src="/aviv-credit.js" strategy="afterInteractive" />
       </body>
     </html>
   );
